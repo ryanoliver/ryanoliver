@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width">
+  <meta name="title" content="Ryan Oliver">
+	<meta name="description" content="I am a self-taught Web and UI Designer and Front-end Developer, living and working in San Juan, Puerto Rico.">
+	<link rel="shortcut icon" href="{{ STATIC_URL }}/me.ico"> 
+  <script src="{{ STATIC_URL }}/javascripts/modernizr-2.6.2.min.js"></script>
+  <script type="text/javascript" src="//use.typekit.net/gob4cmd.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  <link rel="stylesheet" href="{{ STATIC_URL }}/stylesheets/app.css?3">
+  <script>
+      // Enable Brunch HTML/CSS Auto Reload
+      window.brunch = window.brunch || {};
+      window.brunch['auto-reload'] = { enabled: true };
+  </script>
+  <script src="{{ STATIC_URL }}/javascripts/vendor.js"></script>
+	<title>Ryan Oliver</title>
+</head>
+<body>
+  {% block content %}
+	Main content
+	{% endblock %}
+	{% block scripts %}
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	{% endblock %}
+</body>
+</html>
