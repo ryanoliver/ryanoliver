@@ -1,15 +1,37 @@
-<header class='portfolio-header' style='height:628px;'>
+<header id='header' style='height:628px;'>
   <div class='overlay'></div>
   <div class='container'>
     <div class='row'>
-      <div class='col-md-12 header-content-wrapper'>
-        <div class='col-md-2'>
-          <img class='profile-image' src="{{ STATIC_URL }}/images/profile.png">
+      <div class='col-xs-12 col-sm-10 col-md-12 top-navigation-wrapper'>
+        <ul class='top-navigation-menu'>
+          <li class='top-navigation-menu-list'><a href="about.html">About</a></li>
+          <li class='top-navigation-menu-list'><a href="#">Work</a></li>
+        </ul>
+      </div>
+      <div class='col-xs-12 col-sm-10 col-md-12 header-content-wrapper'>
+        <div class='col-xs-4 col-sm-3 col-md-2'>
+          <a href="/">
+            <img class='profile-image img-responsive' src="{{ STATIC_URL }}/images/profile.png">
+          </a>
         </div>
-        <div class='col-md-10'>
-          <h1 class='animated tagline bounceInDown'>I go by the name of <br><strong>Ryan.</strong></h1>
+        <div class='col-xs-8 col-sm-9 col-md-10'>
+        {% if menu == 'index' %}
+          <h1 class='animated tagline bounceInDown'>Hi there, i'm <strong>Ryan Oliver.</strong></h1>
+        {% endif %}
+        {% if menu == 'about' %}
+          <h1 class='animated tagline bounceInDown'>Some things about me</h1>
+        {% endif %}
         </div>
         <div class='clearfix'></div>
+        <div class='col-sm-8 about-wrapper'>
+          {% if menu == 'index' %}
+          <p class='about'>I am a self-taught Web and UI Designer and Front-end Developer, living in San Juan, Puerto Rico.</p>
+          {% endif %}
+          {% if menu == 'about' %}
+          <p class='about'>I enjoy great music & simple designs.</p>
+          {% endif %}
+          <a class='btn btn-default blue-btn hireme' href="#">Hire Me</a>
+        </div>
       </div>
     </div>
   </div>

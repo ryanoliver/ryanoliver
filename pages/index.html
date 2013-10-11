@@ -1,6 +1,39 @@
+menu: index
+
 {% extends "base.html" %}
 {% block content %}
 {% include "header.html" %}
-
+<section id='content'>
+  <div class='container'>
+    <div class='row'>
+      <h2 class='recent-work-title'>My Latest Work</h2>
+      <hr class='hr-divider'>
+      <div class='col-sm-12  recent-work'>
+        <div class='col-sm-4 recent-work-portfolio'>
+          <img class='img-responsive' src="{{ STATIC_URL }}/images/recent-1.jpg" alt='See Puerto Rico Promo Page'>
+        </div>
+        <div class='col-sm-4 recent-work-portfolio'>
+          <img class='img-responsive' src="{{ STATIC_URL }}/images/recent-2.jpg" alt='Blimp Help Page'>
+        </div>
+        <div class='col-sm-4 recent-work-portfolio'>
+          <img class='img-responsive' src="{{ STATIC_URL }}/images/recent-3.jpg" alt='See Puerto Rico Press Release and Blog Websites'>
+        </div>
+      </div>
+      <div class='col-sm-12  recent-work'>
+        <div class='col-sm-4 recent-work-portfolio'>
+          <img class='img-responsive' src="{{ STATIC_URL }}/images/recent-4.jpg" alt='Joyties'>
+        </div>
+        <div class='col-sm-4 recent-work-portfolio'>
+          <img class='img-responsive' src="{{ STATIC_URL }}/images/recent-5.jpg" alt='Startup of Puerto Rico Platform'>
+        </div>
+        <div class='col-sm-4 recent-work-portfolio'>
+          <img class='img-responsive' src="{{ STATIC_URL }}/images/recent-6.jpg" alt='Shopper Agency'>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% include "timeline.html" %}
+{% include "about-me.html" %}
 {% include "footer.html" %}
 {% endblock %}

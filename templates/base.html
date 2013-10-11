@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width">
   <meta name="title" content="Ryan Oliver">
 	<meta name="description" content="I am a self-taught Web and UI Designer and Front-end Developer, living and working in San Juan, Puerto Rico.">
-	<link rel="shortcut icon" href="{{ STATIC_URL }}/me.ico"> 
+	<link rel="shortcut icon" href="{{ STATIC_URL }}/you.ico"> 
   <script src="{{ STATIC_URL }}/javascripts/modernizr-2.6.2.min.js"></script>
   <script type="text/javascript" src="//use.typekit.net/gob4cmd.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
@@ -25,6 +25,21 @@
 	{% endblock %}
 	{% block scripts %}
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="{{ STATIC_URL }}/javascripts/vendor.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $('div#lastfm').lastFM({
+      username: 'username',
+      apikey: 'apikey',
+      number: 1,
+      artSize: 'large',
+      noart: '{{ STATIC_URL }}/images/staytuned.png',
+      onComplete: function(){
+        //Done
+      }
+    });
+  });
+  </script>
 	{% endblock %}
 </body>
 </html>
